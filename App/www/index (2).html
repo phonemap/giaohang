@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8"> 
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/index.js"></script>
+</head> 
+<body> 
+	<div id="one">
+		<div data-role="main" class="ui-content"> 
+			<h3>Đăng nhập</h3>
+			<label for="txt-email">Tên đăng nhập:</label> 
+			<span id="idsai" hidden="true"> Tên đăng nhập không đúng</span>
+			<input type="text" name="txt-user" id="user" value="" placeholder="Tên đăng nhập" autofocus="true"> 
+			<label for="txt-password">Mật khẩu:</label> 
+			<span id="passsai" hidden="true"> Mật khẩu không đúng</span>
+			<input type="password" name="txt-password" id="pass" value="" placeholder="Mật khẩu"> 
+			<a href="#" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5" onclick="login()">Đăng nhập</a> 
+		</div><!-- /content --> 
+	</div><!-- /page --> 
+	
+	<div id="two">
+		<h1>Tăng Kiến Hiệp</h1>
+		<p>Đã giao: <span><strong>2</strong></span></p>
+		<p>Còn lại: <span><strong>3</strong></span></p>
+		<ul data-role="listview" data-inset="true">
+		<li><a href="index.html">
+		<form>
+			<label>
+				<input type="checkbox" name="checkbox-0 ">Anh Phúc
+				<p><strong>551/21 Phan Văn Trị, Phường 5, Quận Gò Vấp</strong></p>
+				<p class="ui-li-aside"><strong>4.5</strong>Km</p>
+			</label>
+		</form>
+		</a></li>
+		<li><a href="index.html">
+		<form>
+			<label>
+				<input type="checkbox" name="checkbox-0 ">Ông Danh
+				<p><strong>551/21 Phan Văn Trị, Phường 5, Quận Gò Vấp</strong></p>
+				<p class="ui-li-aside"><strong>9</strong>Km</p>
+			</label>
+		</form>
+		</a></li>
+		</ul>
+	</div>
+</body> 
+</html>

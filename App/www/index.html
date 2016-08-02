@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8"> 
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDRn30N6GXYpfsaWbuVofqTtXBrdiFU6a4"></script>
+	<script src="js/index.js"></script>
+</head> 
+<body> 
+	<div data-role="page" id="one">
+		<div data-role="main" class="ui-content"> 
+			<h3>Đăng nhập</h3>
+			<label for="txt-email">Tên đăng nhập:</label> 
+			<span id="idsai" hidden="true"> Tên đăng nhập không đúng</span>
+			<span id="idtrong" hidden="true"> Xin nhập tên đăng nhập</span>
+			<input type="text" name="txt-user" id="user" value="" placeholder="Tên đăng nhập" autofocus="true"> 
+			<label for="txt-password">Mật khẩu:</label> 
+			<span id="passsai" hidden="true"> Mật khẩu không đúng</span>
+			<input type="password" name="txt-password" id="pass" value="" placeholder="Mật khẩu"> 
+			<input id="btn-submit" style="text-align:center;padding:0.7em 1em" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5" onclick="login()" value="Đăng nhập"> 
+			<!-- <a href="#" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5" onclick="login()">Đăng nhập</a> -->
+		</div><!-- /content --> 
+	</div><!-- /page --> 
+	
+	<div data-role="page" id="two">
+		<h1 id="ten_nv"></h1>
+		<p> Đã giao: &nbsp; <strong id="dagiao"></strong></p>
+		<p> Còn lại: &nbsp; <strong id="conlai"></strong></p>
+		<ul id="list_donhang" data-role="listview"  onclick="chitiet()">
+		</ul>
+	</div>
+	<div data-role="page" id="three">
+		<div data-role="header">
+			<h1>Chi tiết đơn hàng</h1>
+		</div>
+		Khách hàng: Ông Danh
+		<p>Địa chỉ: 551/21 Phan Văn Trị, Phường 5, Quận Gò Vấp</p>
+		<p>Số điện thoại: 0902 123456</p>
+		<a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-icon-carat-r ui-corner-all ui-btn-icon-right" data-position-to="window">Danh sách các món hàng</a>
+		<div id="map" style="width:100%;height:380px;">
+
+		</div>
+		<div data-role="popup" id="myPopup">
+		<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		<ul data-role="listview">
+			<li>Chicken<span style="position: absolute; right: 0px;"><strong>2</strong></span></li>
+			<li>Cow<span style="position: absolute; right: 0px;"><strong>3</strong></span></li>
+			<li>Duck<span style="position: absolute; right: 0px;"><strong>5</strong></span></li>
+			<li>Sheep<span style="position: absolute; right: 0px;"><strong>2</strong></span></li>
+		</ul>
+    </div>
+	</div>
+
+	
+</body> 
+</html>
